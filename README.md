@@ -1,1 +1,1 @@
-# dynamic-paralax
+# dynamic-parallax
