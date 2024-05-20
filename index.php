@@ -9,9 +9,6 @@ $re = 10; // obezna doba casti elipsy
 //a2 = b2 + h2
 $h = pow(pow($a, 2) - pow($b, 2), 1 / 2);
 
-// alternativni vypocet
-// $h = $a * pow((1 - pow($b / $a, 2)), 1/2);
-
 // plocha elipsy
 $s = pi() * $a * $b;
 
@@ -23,8 +20,9 @@ $t = 10 * ($s / $se);
 
 echo $t;
 
-// p3 = a3/(t2(mh1+mh2))
-$p =
+$a = pow($g * ($m1 + $m2) / 4 * pow(pi(), 2), 1 / 3);
+
+$d = $a / (2 * tan($a / 2));
 
 
 die();
