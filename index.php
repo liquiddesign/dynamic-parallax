@@ -5,7 +5,7 @@ const GRAVITY_CONSTANT = 6.67430e-11;
 const SUN_WEIGHT = 1.989e30; // kg
 const SUN_MAGNITUDE = 4.83; // mag (absolutni)
 const M_IN_PARSEC = 3.0857e16; // m
-const PARSEC_IN_LT = 3.262; // pc
+const PARSEC_IN_LY = 3.262; // pc
 
 // PROMENNE ----------------------
 $a = 4.5; // velka poloosa, uhlove vteriny
@@ -39,13 +39,13 @@ while($precisionPct === null || $precisionPct >= $desiredPrecisionPct) {
 	$i++;
 }
 
-echo 'Iterace / presnost: ' . $i . '/' . $precisionPct . '%' . PHP_EOL;
 echo 'Obezna doba: ' . $t . ' roky' . PHP_EOL;
-echo 'Vzdalenost: ' . pcToLt(metersToPc($d)) . ' lt' . PHP_EOL;
+echo 'Iterace / presnost: ' . $i . '/' . $precisionPct . '%' . PHP_EOL;
+echo 'Vzdalenost: ' . pcToLy(metersToPc($d)) . ' ly ' . PHP_EOL;
 echo 'Absolutni magnituda primarni: ' . $mga1 . ' mag' . PHP_EOL;
 echo 'Absolutni magnituda sekundarni: ' . $mga2 . ' mag' . PHP_EOL;
-echo 'Váha primarni: ' . kgToSun($weight1) . ' slunci (' . $weight1 . 'kg)' . PHP_EOL;
-echo 'Váha sekundarni: ' . kgToSun($weight2) . ' slunci (' . $weight2 . 'kg)' . PHP_EOL;
+echo 'Hmotnost primarni: ' . kgToSun($weight1) . ' slunci (' . $weight1 . 'kg)' . PHP_EOL;
+echo 'Hmotnost sekundarni: ' . kgToSun($weight2) . ' slunci (' . $weight2 . 'kg)' . PHP_EOL;
 die();
 
 // vzdalenost ohniska dle Pythagorovy vety
@@ -110,9 +110,9 @@ function metersToPc(float $d): float
 }
 
 // konverze
-function pcToLt(float $pc): float
+function pcToLy(float $pc): float
 {
-	return $pc / PARSEC_IN_LT;
+	return $pc / PARSEC_IN_LY;
 }
 
 // konverze
